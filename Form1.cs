@@ -36,8 +36,17 @@ namespace TryMSSQL
         private void button1_Click(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand(
-                $"INSERT INTO Students (FirstName, LastName, Birthday) VALUES (N'{textBoxFirstName.Text}', N'{textBoxLastName.Text}', '{textBoxBirthday.Text}')",
+                $"INSERT INTO Students (FirstName, LastName, Birthday, Adress, Phone, Mail) VALUES (@FirstName, @LastName, @Birthday, @Adress, @Phone, @Mail)",
                 sqlConnection);
+
+            DateTime date = DateTime.Parse(textBoxBirthday.Text);
+
+            command.Parameters.AddWithValue("FirstName", textBoxFirstName.Text);
+            command.Parameters.AddWithValue("LastName", textBoxLastName.Text);
+            command.Parameters.AddWithValue("Birthday", $"{date.Month}/{date.Day}/{date.Year}");
+            command.Parameters.AddWithValue("Adress", textBoxAdress.Text);
+            command.Parameters.AddWithValue("Phone", textBoxPhone.Text);
+            command.Parameters.AddWithValue("Mail", textBoxMail.Text);
 
             MessageBox.Show(command.ExecuteNonQuery().ToString());
         }

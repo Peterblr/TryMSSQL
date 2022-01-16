@@ -32,9 +32,9 @@ namespace TryMSSQL
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.INSERT = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxMail = new System.Windows.Forms.TextBox();
+            this.textBoxPhone = new System.Windows.Forms.TextBox();
+            this.textBoxAdress = new System.Windows.Forms.TextBox();
             this.textBoxBirthday = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
@@ -57,9 +57,9 @@ namespace TryMSSQL
             // INSERT
             // 
             this.INSERT.Controls.Add(this.button1);
-            this.INSERT.Controls.Add(this.textBox6);
-            this.INSERT.Controls.Add(this.textBox5);
-            this.INSERT.Controls.Add(this.textBox4);
+            this.INSERT.Controls.Add(this.textBoxMail);
+            this.INSERT.Controls.Add(this.textBoxPhone);
+            this.INSERT.Controls.Add(this.textBoxAdress);
             this.INSERT.Controls.Add(this.textBoxBirthday);
             this.INSERT.Controls.Add(this.textBoxLastName);
             this.INSERT.Controls.Add(this.textBoxFirstName);
@@ -81,26 +81,30 @@ namespace TryMSSQL
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox6
+            // textBoxMail
             // 
-            this.textBox6.Location = new System.Drawing.Point(559, 30);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 5;
+            this.textBoxMail.Location = new System.Drawing.Point(559, 30);
+            this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.Size = new System.Drawing.Size(100, 22);
+            this.textBoxMail.TabIndex = 5;
+            this.textBoxMail.Tag = "";
+            this.textBoxMail.Text = "Mail";
             // 
-            // textBox5
+            // textBoxPhone
             // 
-            this.textBox5.Location = new System.Drawing.Point(453, 30);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 4;
+            this.textBoxPhone.Location = new System.Drawing.Point(453, 30);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(100, 22);
+            this.textBoxPhone.TabIndex = 4;
+            this.textBoxPhone.Text = "Phone";
             // 
-            // textBox4
+            // textBoxAdress
             // 
-            this.textBox4.Location = new System.Drawing.Point(347, 30);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 3;
+            this.textBoxAdress.Location = new System.Drawing.Point(347, 30);
+            this.textBoxAdress.Name = "textBoxAdress";
+            this.textBoxAdress.Size = new System.Drawing.Size(100, 22);
+            this.textBoxAdress.TabIndex = 3;
+            this.textBoxAdress.Text = "Adress";
             // 
             // textBoxBirthday
             // 
@@ -158,9 +162,9 @@ namespace TryMSSQL
         private System.Windows.Forms.TabPage INSERT;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxMail;
+        private System.Windows.Forms.TextBox textBoxPhone;
+        private System.Windows.Forms.TextBox textBoxAdress;
         private System.Windows.Forms.TextBox textBoxBirthday;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxFirstName;
