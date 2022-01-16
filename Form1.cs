@@ -32,5 +32,14 @@ namespace TryMSSQL
                 MessageBox.Show("Connect!!!");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand(
+                $"INSERT INTO Students (FirstName, LastName, Birthday) VALUES (N'{textBoxFirstName.Text}', N'{textBoxLastName.Text}', '{textBoxBirthday.Text}')",
+                sqlConnection);
+
+            MessageBox.Show(command.ExecuteNonQuery().ToString());
+        }
     }
 }
